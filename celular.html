@@ -1,0 +1,358 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    .footer{
+        background-color: black;
+        width: 101.03%;
+        height: 200px;
+        margin-left: -7.7px;
+        margin-bottom: -8px;
+        padding-top: 20px;
+        display: flex;
+        margin-top: 100px;
+    }
+    .contact{
+        color: white;
+       font-family: "Josefin Sans", sans-serif;
+        font-size: 15px;
+        margin: auto;
+        
+        text-align: center;
+    }
+    
+    .mainSpace{
+    
+       height: 715px;
+       display: flex;
+       width: 100%; 
+       margin: auto;
+       
+
+    }
+    .centro{
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 550px;
+        width: 400px;
+    }
+    .inputSpace{
+        width: 281.25px;
+        justify-content: center;
+        margin: auto;
+    }
+    .start{
+        margin: auto;
+        justify-content: center;
+       font-family: "Josefin Sans", sans-serif;
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+
+    }
+    .startText{
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        color: black;
+       font-family: "Josefin Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .sideInput{
+        margin: 0 auto;
+        width: 281.25px;
+        height: 45px;
+        margin-bottom: 10px;
+        
+        text-align: center;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+    .between{
+        height: 50px;
+    }
+
+    .leftSpace{
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        height: 600px;
+        width: 50%;
+        
+    }
+    .rightSpace{
+        margin-top: -9px;
+        height: 730E0218Apx;
+        justify-content: center;
+        text-align: center;
+        
+        margin-left:-9px ;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        --opacidad-negro: 0.8;
+        background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(/doblada);
+    }
+    
+
+    input[type=text]:focus {
+    border: 2px solid #555;
+    }
+    .sideButton{
+        margin: 0 auto;
+        width: 281.25px;
+        height: 45px;
+        
+        border-style: none;
+        background-color: black;
+        color: white;
+    }
+    
+    .space{
+        width: 200px;
+    }
+    
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .espacioTabla{
+        margin: auto;
+        width: 418.47px;
+        justify-content: center;
+        
+    }
+    td{
+        font-size: 18px;
+       font-family: "Josefin Sans", sans-serif;
+        margin-left:10px;
+        color: black;
+    }
+    .secondSpace{
+        margin-top: 50px;
+        color: black;
+    }
+    .secondStart{
+        margin: auto;
+        justify-content: center;
+       font-family: "Josefin Sans", sans-serif;
+        font-size: 50px;
+        font-weight: 600;
+        width: 416px;
+        margin-bottom: 20px;
+    }
+    .tdspace{
+        
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 5px;
+        width: 5px;
+    }
+</style>
+<body>
+
+    <div class="mainSpace">
+       
+        <div class="centro">
+            <div class="between"></div>
+            <div class="start"><a href="/index">Phone's Shop</a></div>
+            <p class="startText"> Ingresa los datos de los celulares</p>
+            <div class="between"></div>
+            <div class="inputSpace">
+                <input class="sideInput" type="text" placeholder="Identificador" id="identificador"/>
+                <input class="sideInput" type="text" placeholder="Marca" id="marca"/>
+                <input class="sideInput" type="text" placeholder="Modelo" id="modelo"/>
+                <input class="sideInput" type="text" placeholder="Color" id="color"/>
+                <input class="sideInput" type="number" placeholder="Precio" id="precio"/>
+                <input class="sideButton" type="button" value="Guardar" onclick="guarda()"/>
+                
+            </div>
+
+            <div class="between"></div>
+            <div class="between"></div>
+        </div>   
+            
+            
+            
+    </div>
+    <div class="secondSpace">
+        <div class="secondStart">
+            Lista de Celulares
+        </div>
+        <div id="espacioTabla" class="espacioTabla">
+            <table>
+            <thead>
+            <tr>
+            <td>Identificador</td>
+            <td class="tdspace"></td>
+            <td>Marca</td>
+            <td class="tdspace"></td>
+            <td>Modelo</td>
+            <td class="tdspace"></td>
+            <td>Color</td>
+            <td class="tdspace"></td>
+            <td>Precio</td>
+            <td class="tdspace"></td>
+            <td>Eliminar</td>
+         
+            
+            </tr>
+            
+            </thead>
+            <tbody id="cuerpoTabla">
+            </tbody>
+            </table>
+        
+        </div>   
+    
+    </div>
+    
+    
+    
+        <div class="footer">
+            <div class="contact">
+                <p>Correo electrónico:</p>
+                <p>phonesshop@gmail.com</p>
+                <p>Número de teléfono:</p>
+                <p>1234-5678</p>
+    
+            </div>
+        </div>
+
+
+
+
+<script type="text/javascript">
+function cargarDatos()
+        {
+        var objetoaenviar = new Object();
+                    
+            try
+                {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET','/celular');
+                    xhr.setRequestHeader('Content-Type','application/json');
+                    xhr.onload = function()
+                    {
+                    if(xhr.status == 200)
+                        {
+                            console.log(JSON.parse(xhr.responseText));
+                            rellenaTabla(JSON.parse(xhr.responseText))
+                        }
+                    else
+                        {
+                            console.log(xhr);
+                        }
+                    };
+                    xhr.send();
+                    }
+            catch(err)
+                {
+                    console.log(err.message);
+                }
+        }
+
+function guarda()
+
+
+        {
+            var objetoaenviar = new Object();
+            objetoaenviar.identificador = document.getElementById("identificador").value     
+            objetoaenviar.marca = document.getElementById("marca").value 
+            objetoaenviar.modelo = document.getElementById("modelo").value  
+            objetoaenviar.color = document.getElementById("color").value 
+            objetoaenviar.precio = document.getElementById("precio").value        
+            try
+                {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('PUT','/celular');
+                    xhr.setRequestHeader('Content-Type','application/json');
+                    xhr.onload = function()
+                    {
+                    if(xhr.status == 200)
+                        {
+                            console.log(JSON.parse(xhr.responseText));
+                            alert('Guardado')
+                            rellenaTabla(JSON.parse(xhr.responseText))
+
+                        }
+                    else
+                        {
+                            console.log(xhr);
+                        }
+                    };
+                    xhr.send(JSON.stringify(objetoaenviar));
+                    }
+            catch(err)
+                {
+                    console.log(err.message);
+                }
+        }
+        
+function rellenaTabla(vector)
+        {
+        document.getElementById("cuerpoTabla").innerHTML =""
+        document.getElementById("cuerpoTabla").innerHTML += "<tr>"
+        for (var elemento in vector)
+            {
+                document.getElementById("cuerpoTabla").innerHTML += "<td>" + vector[elemento].identificador + "</td><td class='tdspace'></td><td>"+ vector[elemento].marca  + "</td><td class='tdspace'></td><td>" + vector[elemento].modelo + "</td><td class='tdspace'></td><td>" + vector[elemento].color + "</td><td class='tdspace'></td><td>"+ vector[elemento].precio  + "</td><td class='tdspace'></td><td><input type= 'button' value = 'Eliminar' onclick= 'eliminar(" +
+            vector[elemento].identificador +
+            ")' /></td>"
+            }
+            document.getElementById("cuerpoTabla").innerHTML += "</tr>"
+        }
+
+function eliminar(identificador)
+{
+if (window.confirm("Desea eliminar el dato?")) {
+    var objetoaenviar = new Object();
+    objetoaenviar.identificador = String(identificador)  
+    objetoaenviar.marca = ""
+    objetoaenviar.modelo = ""
+    objetoaenviar.color = ""
+    objetoaenviar.precio= 0     
+    
+                
+    try
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('DELETE','/celular');
+            xhr.setRequestHeader('Content-Type','application/json');
+            xhr.onload = function()
+            {
+            if(xhr.status == 200)
+                {
+                    console.log(JSON.parse(xhr.responseText));
+                    alert('Eliminado')
+                    rellenaTabla(JSON.parse(xhr.responseText))
+
+                }
+            else
+                {
+                    console.log(xhr);
+                }
+            };
+            xhr.send(JSON.stringify(objetoaenviar));
+            }
+    catch(err)
+        {
+            console.log(err.message);
+        }   
+        } 
+}
+
+cargarDatos()
+
+</script>
+</body>
+</html>
